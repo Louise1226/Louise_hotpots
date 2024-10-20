@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>路易HOTPOT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            padding-bottom: 50px; /* 增加底部內邊距，避免內容被 footer 擋住 */
+        }
+        header {
+            background: #c0392b;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #e74c3c;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .hero {
+            display: block;
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            margin: 0;
+        }
+        section {
+            display: none;
+            padding: 20px;
+            background: #fff;
+            margin: 20px 0;
+            border-radius: 5px; /* 增加圓角效果 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
+        }
+        .active {
+            display: block;
+        }
+        .menu img {
+            width: 100px;
+            height: auto;
+            margin: 100px 0;
+        }
+        .menu img {
+    width: 80%; /* 調整為合適的大小，例如 80% 或 300px */
+    height: auto; /* 自動調整高度 */
+    margin: 20px 0; /* 增加邊距 */
+}
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative; /* 改為相對定位，避免固定在底部 */
+            bottom: 0; /* 使 footer 在正常文檔流中 */
+            width: 100%;
+        }
+        .map {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            margin-top: 20px; /* 增加上邊距 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>路易HOTPOT</h1>
+        <p>高貴不貴，一鍋最純真的幸福</p>
+    </header>
+
+    <nav>
+        <a onclick="toggleSection('about')">品牌故事</a>
+        <a onclick="toggleSection('menu')">菜單</a>
+        <a onclick="toggleSection('contact')">聯絡我們</a>
+    </nav>
+
+    <img class="hero" src="https://cc.tvbs.com.tw/img/program/upload/2022/02/24/20220224150004-6099372c.jpg" alt="火鍋圖片">
+
+    <section id="about">
+        <h2>品牌背後的故事</h2>
+        <p>
+            從小我就對火鍋情有獨鍾。無論是炎炎夏日還是寒冷冬天，我都會選擇一鍋熱騰騰的火鍋來滿足味蕾。每次家人問我想吃什麼，我總是毫不猶豫地回答：“火鍋！” 麻辣鍋的香辣刺激，讓人熱血沸騰；石頭鍋的香氣四溢，總能讓我一口接一口停不下來。各式各樣的湯底與食材搭配，讓火鍋的魅力無窮無盡，我怎麼也吃不膩。
+            前陣子，我決定到一家火鍋店打工，親身體驗火鍋背後的世界。剛開始時，我以為自己已經算是火鍋的行家，沒想到進入餐廳才發現，還有太多知識我不曾了解過。如何選購新鮮的食材、怎麼調製風味獨特的湯底，甚至如何掌控火候和時間，這些細節都深深影響著一鍋火鍋的成敗。每一道程序都蘊藏著餐飲人的心血與智慧。
+            這段打工經歷讓我學到了很多，也讓我對火鍋有了更深的熱愛。現在的我，不僅是個火鍋迷，現在有一天能將自己對火鍋的熱情轉化為事業，把這份幸福的味道傳遞給更多人讓我很期待。無論未來走到哪裡，我都會繼續探索火鍋的無限可能，讓這份熱愛永不停歇。
+        </p>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2>菜單</h2>
+        <img src="image/menu.png" alt="menu">
+    </section>
+    
+
+    <section id="contact">
+        <h2>聯絡我們</h2>
+        <p>電話：02-1234-5678</p>
+        <p>電子郵件：Louise@hotpot.com</p>
+        <p>營業時間：週一至週日，11:00 - 22:00</p>
+        <p>地址：台北市信義區松仁路00號00樓</p>
+        <h3>地圖</h3>
+        <iframe 
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086317396579!2d121.5609373!3d25.0339648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aba05e5eab1d%3A0x2cd66e63fd56d660!2sTaipei%20101!5e0!3m2!1sen!2stw!4v1618370134679!5m2!1sen!2stw"
+            allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 路易HOTPOT | 台北市信義區松仁路00號00樓 | 營業時間：11:00 - 22:00</p>
+    </footer>
+
+    <script>
+        function toggleSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
